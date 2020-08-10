@@ -1,2 +1,2 @@
 # project-wyyx
-myproject
+myproject 网易严选

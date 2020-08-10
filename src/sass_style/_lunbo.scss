@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* 轮播图 */
+#bannerbox {
+    width: 100%;
+    height: 420px;
+    display: flex;
+    .banner {
+        height: 100%;
+        margin: auto;
+        width: 1920px;
+        position: relative;
+        // display:flex;
+        overflow: hidden;
+        // 轮播图片
+        .bannerImg {
+            li {
+                position: absolute;
+                height: 420px;
+                width: 1920px;
+                opacity: 0;
+                cursor: pointer;
+                left: -190px;
+            }
+        }
+        // 轮播图片按钮
+        .btn {
+            position: absolute;
+            z-index: 9;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            opacity: 80;
+            background: url("../img/icon2.png") no-repeat 0 -2623px;
+            border-radius: 500px;
+        }
+        .btnLeft {
+            top: 200px;
+            left: 130px;
+        }
+        .btnLeft:hover {
+            background: url("../img/icon2.png") no-repeat 0 -2563px;
+        }
+        .btnRright {
+            top: 200px;
+            right: 180px;
+            transform: rotate(180deg);
+        }
+        .btnRright:hover {
+            background: url("../img/icon2.png") no-repeat 0 -2563px;
+        }
+        // 轮播图小按钮部分
+    }
+}
+.banner .samllbtn {
+    position: absolute;
+    height: 20px;
+    bottom: 10px;
+    left: 610px;
+    li {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 10px;
+        cursor: pointer;
+        span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: block;
+            background: white;
+            border: 1px solid #cecece;
+        }
+    }
+    .active {
+        box-shadow: 0 0 0 4px #dfcead;
+    }
+}

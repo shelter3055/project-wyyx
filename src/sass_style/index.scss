@@ -1,0 +1,17 @@
+@charset "utf-8"; //中文编码
+$hovercolor:#ffff;
+$color:#666; //普通文字color
+
+@mixin banxin {
+    width: 1090px;
+    margin: 0 auto;    
+}
+
+@import 'header';
+@import 'lunbo';
+@import 'indexgoods';
+@import 'rigandleft';
+
+@import 'logninreg';
+@import 'footer';
+
