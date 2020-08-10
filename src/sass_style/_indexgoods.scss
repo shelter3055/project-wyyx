@@ -349,7 +349,8 @@
             // <!-- 上面图片内容 -->
             .product-Content-Top {
                 position: relative;
-                height: 180px;
+                height: 160px;
+                margin-top: 22px;
                 overflow: hidden;
                 img {
                     width: 140px;
@@ -981,7 +982,7 @@
     margin-top: 20px;
     width: 1090px;
     height: 840px;
-    margin: 50px auto 0px;
+    margin: 25px auto 0px;
     // background: green;
     margin-bottom: 15px;
     // 头部标签

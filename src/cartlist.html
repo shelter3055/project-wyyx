@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车 - 网易严选</title>
+    <meta name="keywords" content="网易严选,严选,电子商务,网购,居家,厨房,饮食,甄选家,有态度,一流制造商,匠心打造,源头把控,绿色,安全,舒适,健康,品质,严格甄选,出口品质" />
+    <meta name="description" content="网易严选秉承网易一贯的严谨态度，深入世界各地，严格把关所有商品的产地、工艺、原材料，甄选居家、厨房、饮食等各类商品，力求给你最优质的商品。" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/cartlist.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+</head>
+
+<body>
+    <!-- 头部公共部分 -->
+    <div id="headerone">
+    </div>
+    <!-- 购物车 -->
+    <div class="cart">
+        <!-- 没登录之前的页面 -->
+        <!-- <div class="cart-empty">
+
+        </div> -->
+
+        <!-- 登录之后的页面 -->
+        <div class="cart">
+            <div class="cart-title">
+                <!-- 全选 -->
+                <div>
+                    <input type="checkbox" class="allcheck">
+                    <span>全选</span>
+                </div>
+                <!-- 商品信息 -->
+                <div>
+                商品信息
+                </div>
+                <!-- 单价 -->
+                <div>
+                    单价
+                </div>
+                <!-- 数量 -->
+                <div>
+                    数量
+                </div>
+                <div>
+                    小计
+                </div>
+                <div>
+                    操作
+                </div>
+            </div>
+            <div class="cart-content">
+                <div class="cart-item">
+                    <input type="checkbox" class="onecheck">
+                    <img class="picture" src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&quality=95&thumbnail=200x200&imageView" alt="">
+                    <!-- 标题 -->
+                    <!-- <p class="title">【丁磊直播款】多功能人体工学转椅</p> -->
+                    <div class="title-box">
+                        <div class="title1">【丁磊直播款】多功能人体工学转椅</div>
+                        <div>撑腰护颈，舒适就坐一整天</div>
+                    </div>
+                    <!-- <div class="title-box">111111111</div> -->
+                    <!-- 价格部分 -->
+                    <div class="jiage">
+                        <p class="price">￥1199</p>
+                        <p>限时购</p>
+                    </div>
+                    <!-- 数量 -->
+                    <div class="number">
+                        <div>
+                            <div class="jianhao">
+                                <i></i>
+                            </div>
+                            <input type="text" value="1">
+                            <div class="jiahao">
+                                <i></i>
+                                <i></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- 小计 -->
+                    <div class="oneall">
+                        ￥1199
+                    </div>
+                    <!-- 操作 -->
+                    <div class="play">
+                        <p>移入收藏夹</p>
+                        <p class="delete">删除</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-foot">
+                <div>
+                    <input type="checkbox" class="allcheck">
+                    <span class="jianshu">已选</span>
+                </div>
+              
+                <div class="piliang" style="cursor: pointer;">批量删除</div>
+                
+                <div class="xiadan-btn">
+                    下单
+                </div>
+                <div>
+                   <span>总价</span> 
+                    <span class="zongjia">
+                        ¥&nbsp0
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div id="Footer">
+    </div>
+
+    <script src="./publicjs/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#headerone").load("./header.html");
+        })
+        $(function () {
+            $("#Footer").load("./footer.html");
+        })
+    </script>
+</body>
+
+</html>

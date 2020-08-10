@@ -716,7 +716,8 @@
 }
 .hotcontent-right ul li .product-Content-Top {
   position: relative;
-  height: 180px;
+  height: 160px;
+  margin-top: 22px;
   overflow: hidden;
 }
 .hotcontent-right ul li .product-Content-Top img {
@@ -1257,7 +1258,7 @@
   margin-top: 20px;
   width: 1090px;
   height: 840px;
-  margin: 50px auto 0px;
+  margin: 25px auto 0px;
   margin-bottom: 15px;
 }
 .jujia .jujia-title {

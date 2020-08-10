@@ -514,319 +514,277 @@ footer .lastend-bottom div p span {
     display: inline-block;
     margin-right: 15px;
 }
-/* ------detail-------- */
-.details {
-    margin: 30px auto 0;
+
+#koubeibox {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #f4f0ea;
+  }
+  #koubeibox .koubei {
+    background: white;
+    position: relative;
+    margin: 0 auto;
+    width: 1090px;
+  }
+  #koubeibox .koubei .paixu {
     width: 1090px;
     overflow: hidden;
-}
-.details .details-left {
-    width: 428px;
-    float: left;
-}
-.details .details-left .details-left-top {
-    height: 428px;
-    width: 428px;
-    background: #ddd;
-    position: relative;
-}
-.details .details-left .details-left-top img {
-    height: 428px;
-    width: 428px;
-}
-.details .details-left .details-left-top #sf {
-    width: 250px;
-    height: 250px;
-    background: orange;
-    opacity: 0.3;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    visibility: hidden;
-}
-.details .details-left .details-left-top #bf {
-    width: 400px;
-    height: 400px;
-    border: 1px solid #000;
-    overflow: hidden;
-    position: absolute;
-    visibility: hidden;
-    z-index: 100;
-    left: 440px;
-    top: 0px;
-}
-.details .details-left .details-left-top #bf img {
-    position: absolute;
-    width: 800px;
-    height: 800px;
-}
-.details .details-left .details-left-buttom {
-    position: relative;
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
-}
-.details .details-left .details-left-buttom a {
-    width: 10px;
-    height: 54px;
-    border: 1px solid #ccc;
-    text-decoration: none;
-    line-height: 56px;
-    text-align: center;
-    background: #fff;
-    position: absolute;
-    z-index: 3;
-    top: 16px;
-}
-.details .details-left .details-left-buttom a:nth-child(1) {
-    left: 0;
-}
-.details .details-left .details-left-buttom a:nth-child(3) {
-    right: 0;
-}
-.details .details-left .details-left-buttom ul {
-    width: 810px;
-    margin-top: 10px;
-    position: absolute;
-    margin-left: 12px;
-}
-.details .details-left .details-left-buttom ul li {
-    float: left;
-    vertical-align: middle;
-    margin-right: 8px;
-    height: 76px;
-    width: 76px;
-}
-.details .details-left .details-left-buttom ul li img {
-    width: 76px;
-    height: 76px;
-}
-.details .details-right {
-    width: 620px;
-    margin-left: 42px;
-    float: left;
-}
-.details .details-right .title {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 20px;
-}
-.details .details-right p:nth-child(2) {
+    padding: 20px 0;
+    line-height: 1;
+    border-top: 1px dashed #dedede;
+    border-bottom: 1px dashed #dedede;
+  }
+  #koubeibox .koubei .paixu span {
     font-size: 14px;
-    line-height: 20px;
-    color: #999;
-    margin-top: 10px;
-}
-
-.product {
-    background-color: #f5f3ef;
-    border-top: 1px dotted #dedede;
-    border-bottom: 1px dotted #dedede;
-    padding: 10px 0 10px 13px;
-    line-height: 24px;
-}
-.product .price {
-    overflow: hidden;
-}
-.product .price > span:nth-child(1) {
-    float: left;
-    width: 55px;
-    font-size: 13px;
-    color: #666;
-    margin-top: 8px;
-}
-.product .price div {
-    float: left;
-    font-size: 18px;
-    font-weight: 700;
-    margin-left: 0;
-    height: 30px;
-    color: #d7282d;
-}
-.product .price div span:nth-child(2) {
-    font-size: 28px;
-    line-height: 30px;
-    margin-left: 2px;
-}
-.product .zuxiao > span:nth-child(1) {
     display: inline-block;
-    width: 55px;
-    font-size: 13px;
-    color: #666;
-    margin-top: 8px;
-}
-.product .zuxiao span:nth-child(2) {
+    vertical-align: middle;
+    margin-right: 28px;
+    cursor: pointer;
+    color: #999;
+  }
+  #koubeibox .koubei .paixu span:nth-child(2) {
+    color: #b4a078;
+  }
+  #koubeibox .koubei .paixu span:nth-child(3) {
+    color: #999;
+  }
+  
+  #koubeibox .koubei h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 44px;
+  }
+  #koubeibox .koubei .koubei-content {
+    overflow: hidden;
+    width: 1080px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #koubeibox .koubei .koubei-content ul{
+      margin-left: 10px;
+      background: green;
+  }
+  #koubeibox .koubei .koubei-content li {
+    width: 260px;
+    background: white;
+    margin-right: 10px;
+    float: left;
+  }
+  
+  #koubeibox .koubei .koubei-content li:hover img:nth-child(2) {
+    z-index: 0;
+  }
+  #koubeibox .koubei .koubei-content li:hover {
+    background-color: #f4f0ea;
+    /* background: orange; */
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Top {
+    height: 300px;
+    position: relative;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Top img {
+    position: absolute;
+    z-index: 0;
+    width: 200px;
+    height: 200px;
+    margin: 10px 0 0 30px;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Top img:nth-child(2) {
+    z-index: -1;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: url("https://yanxuan.nosdn.127.net/73de0050620397b41099c356292b28c8.png") no-repeat;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left {
+    padding-left: 8px;
+    padding-right: 14px;
+    margin-top: -6px;
+    height: 36px;
+    float: left;
+    color: white;
+    background: url("https://yanxuan.nosdn.127.net/ce3597696f4c886d1d81a7d94f8cfe6e.png?quality=95&type=webp&imageView") no-repeat -435px 0px;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left div:nth-child(1) {
+    font-size: 12px;
+    height: 15px;
+    line-height: 1;
+    margin-top: 5px;
+    text-align: center;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left div:nth-child(2) {
+    padding-left: 3px;
+    font-size: 12px;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left div:nth-child(2) span {
+    font-size: 14px;
+    height: 20px;
+    line-height: 14px;
+    margin-top: -1px;
+    font-weight: 700;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-right {
+    float: left;
+    color: #fff;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 5px;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Botton {
+    margin-top: 5px;
+    margin-bottom: 50px;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Botton div:nth-child(1) {
+    text-align: center;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Botton div:nth-child(1) span {
+    margin-left: 6px;
     display: inline-block;
     height: 20px;
     line-height: 20px;
-    color: #fff !important;
+    color: #fff;
     padding: 0 5px;
     font-size: 12px;
-    background-color: #e36844;
-}
-.product .zuxiao span:nth-child(3) {
-    line-height: 28px;
-    color: #333;
-    font-size: 13px;
-}
-.product .gouwufan span {
-    font-size: 13px;
-    display: inline-block;
-}
-.product .gouwufan span:nth-child(1) {
-    width: 55px;
-    color: #666;
-}
-.product .gouwufan span:nth-child(2) {
-    line-height: 24px;
-    color: #666;
-}
-.product .gouwufan span:nth-child(3) {
-    color: #c43c3b;
-    margin-right: 4px;
-    margin-left: 2px;
-}
-.product hr {
-    margin: 10px 20px 10px 10px;
-    overflow: hidden;
-    border: none;
-    height: 1px;
-    border-bottom: 1px dashed #d2d2d2;
-}
-.product .fuwu {
-    font-size: 13px;
-}
-.product .fuwu > span:nth-child(1) {
-    width: 55px;
-    color: #666;
-    display: inline-block;
-    vertical-align: top;
-}
-.product .fuwu div {
-    vertical-align: top;
-    width: 500px;
-    display: inline-block;
-}
-.product .fuwu div span {
-    display: inline-block;
+    background: #e36844;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Botton h4 {
+    width: 166px;
+    margin: 0 auto 4px;
     line-height: 20px;
-    color: #666;
-}
-
-.number {
-    margin-top: 20px;
     overflow: hidden;
-}
-.number span:nth-child(1) {
-    float: left;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Botton h4 a {
+    margin-top: 5px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Botton h4 a span {
+    font-size: 14px;
+    color: black;
+    display: block;
+    font-weight: bold;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Botton p {
+    text-align: center;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Botton p span:nth-child(1) {
+    display: inline-block;
+    line-height: 13px;
+    height: 13px;
     font-size: 13px;
-    color: #666;
-    width: 54px;
-    margin: 10px 0 0 10px;
-}
-.number > div {
-    border: 1px solid #ddd;
-    overflow: hidden;
-    width: 138px;
-}
-.number > div .jianhao {
-    position: relative;
-    float: left;
-    width: 36px;
-    height: 30px;
-    line-height: 28px;
-    background: #fff;
-    border-right: 1px solid #ddd;
-}
-.number > div .jianhao i {
-    background: #d3d3d3;
-    height: 2px;
-    width: 10px;
-    overflow: hidden;
-    position: absolute;
-    top: 15px;
-    left: 12px;
-}
-.number > div input {
-    border: none;
-    width: 60px;
-    margin: 0;
+    color: #d4282d;
+  }
+  #koubeibox .koubei .koubei-content .product-Content-Botton p span:nth-child(2) {
+    display: inline-block;
+    color: #999;
+    line-height: 12px;
+    height: 12px;
     font-size: 12px;
-    text-align: center;
-    color: #333;
-    height: 28px;
-    line-height: 28px;
-    background: #fff;
-    float: left;
-    outline: 0;
-}
-.number > div .jiahao {
-    position: relative;
-    float: left;
-    width: 36px;
-    height: 30px;
-    line-height: 28px;
-    background: #fff;
-    border-left: 1px solid #ddd;
-}
-.number > div .jiahao i {
-    background: #d3d3d3;
-    height: 2px;
-    width: 10px;
+  }
+  #koubeibox .koubei .koubei-content li:nth-child(4n) {
+    margin-right: 0;
+  }
+  #koubeibox .koubei .pagelist {
     overflow: hidden;
-    position: absolute;
-}
-.number > div .jiahao i:nth-child(1) {
-    top: 15px;
-    left: 12px;
-}
-.number > div .jiahao i:nth-child(2) {
-    top: 15px;
-    left: 12px;
-    transform: rotate(90deg);
-}
-
-.btn {
-    margin-left: 10px;
-    margin-top: 30px;
-}
-.btn div:nth-child(1) {
-    cursor: pointer;
+    clear: both;
+    width: 1090px;
+    margin: 0 auto;
+    text-align: right;
+    padding-right: 20px;
+  }
+  #koubeibox .koubei .pagelist a {
+    text-decoration: none;
+  }
+  #koubeibox .koubei .pagelist .m-style {
+    float: right;
     text-align: center;
-    width: 168px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
-    color: #b4a078;
-    border: 1px solid #b4a078;
-    background-color: #f5f3ef;
-    vertical-align: middle;
-    display: inline-block;
-}
-.btn a:nth-child(2) {
-    cursor: pointer;
+  }
+  #koubeibox .koubei .pagelist .m-style:before,
+  #koubeibox .koubei .pagelist .m-style:after {
+    content: "";
+    display: table;
+  }
+  #koubeibox .koubei .pagelist .m-style:after {
+    clear: both;
+    overflow: hidden;
+  }
+  #koubeibox .koubei .pagelist .m-style span {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    color: #bdbdbd;
+    font-size: 14px;
+  }
+  #koubeibox .koubei .pagelist .m-style .active {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #c2b9bc;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #c2b9bc;
+  }
+  #koubeibox .koubei .pagelist .m-style a {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    color: #bdbdbd;
+    font-size: 14px;
+  }
+  #koubeibox .koubei .pagelist .m-style a:hover {
+    color: #fff;
+    background: #c2b9bc;
+  }
+  #koubeibox .koubei .pagelist .m-style .next,
+  #koubeibox .koubei .pagelist .m-style .prev {
+    font-family: "Simsun";
+    font-size: 16px;
+    font-weight: bold;
+    width: 80px;
+  }
+  #koubeibox .koubei .pagelist .now,
+  #koubeibox .koubei .pagelist .count {
+    padding: 0 5px;
+    color: #f00;
+  }
+  #koubeibox .koubei .pagelist .eg img {
+    max-width: 800px;
+    min-height: 500px;
+  }
+  #koubeibox .koubei .pagelist input {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
     text-align: center;
-    width: 168px;
-    height: 50px;
-    color: white;
-    border: 1px solid #b4a078;
-    background-color: #b4a078;
-    vertical-align: middle;
-    display: inline-block;
-    margin-left: 10px;
-}
-.btn a:nth-child(2) i {
-    display: inline-block;
-    background: url(../img/icon4.png) no-repeat;
-    margin: 12px 8px 0 0;
-    background-position: 0 -68px;
-    height: 21px;
-    width: 21px;
-    vertical-align: top;
-}
-.btn a:nth-child(2) span {
-    display: inline-block;
-    font-size: 18px;
-    line-height: 50px;
-    vertical-align: top;
-}
+    background: #fff;
+    border: 1px solid #ebebeb;
+    outline: none;
+    color: #bdbdbd;
+    font-size: 14px;
+  }
