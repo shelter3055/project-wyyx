@@ -1,8 +1,8 @@
 define(['jquery'], function ($) {
     return {
+        //渲染
         render: function () {
             console.log(1111);
-            // const $render1=$('')
             const $hotcontent = $('.hotcontent')
             // const $hotcontent_btn = $('.hottitle li')
             const $hotcontent_btn = $('.hottitle li')
@@ -13,8 +13,7 @@ define(['jquery'], function ($) {
                 $hotcontent.eq(index).css("display", "block")
                     .siblings(".hotcontent").css("display", "none")
             })
-            // 渲染 6条数据
-
+            
             $.ajax({
                 url: "http://10.31.152.32/project-wyyx/php/alldata.php",
                 type: "GET"
@@ -29,10 +28,10 @@ define(['jquery'], function ($) {
                 const $content2 = $(".timebuy-right");
                 let strhtml3 = '';  //福利社
                 const $content3 = $(".welfare-content-list");
-                let strhtml4=''; //居家生活
-                const $content4=$(".product-Content");
-
-
+                let strhtml4 = ''; //居家生活
+                const $content4 = $(".product-Content1");
+                let strhtml5 = '';   //美食生活
+                const $content5 = $(".product-Content2")
 
                 $.each(arrdata, (index, value) => {
                     // console.log(index);
@@ -93,8 +92,8 @@ define(['jquery'], function ($) {
                                 alt="">
                         </div>
                         <div class="timebuy-item-right">
-                            <h2>轻灵碳素羽毛球拍 单只装</h2>
-                            <p>超轻球拍，运动随心</p>
+                            <h2>${value.title}</h2>
+                            <p>${value.titletext}</p>
                             <!-- 剩余件数 -->
                             <div class="timebuy-item-num">
                                 <!-- 进度条 -->
@@ -121,8 +120,8 @@ define(['jquery'], function ($) {
                      `;
                     }
                     //福利社
-                    if (index >= 10 &&index<14){
-                        strhtml3+=`
+                    if (index >= 10 && index < 14) {
+                        strhtml3 += `
                         <div class="welfare-content-product">
                             <!-- 左边商品图片 -->
                             <div class="welfare-content-product-left">
@@ -149,91 +148,78 @@ define(['jquery'], function ($) {
 
                     }
                     //居家生活
-                    if(index>=14&&index<18){
-                        strhtml4+=`
-                        <section>
+                    if (index >= 14 && index < 18) {
+                        strhtml4 += `
+                        <section class="con1">
+                            <!-- 上面图片内容 -->
+                            <div class="product-Content-Top1">
+                                <img src="${value.url}"
+                                    alt="">
+                            </div>
+                            <!-- 下面标题价格内容 -->
+                            <div class="product-Content-Botton1">
+                                <div><span>每满200减25劵</span></div>
+                                <!-- 标题 -->
+                                <h4>
+                                    <a href="" title="${value.title}">
+                                        <span>${value.title}</span>
+                                    </a>
+                                </h4>
+                                <!-- 价格 -->
+                                <p>
+                                    <span>¥${value.price}</span>
+                                    <span><del>￥${value.befprice}</del></span>
+                                </p>
+                            </div>
+                        </section>
+                        
+                        `;
+                    }
+                    //美食生活
+                    if (index >= 18 && index < 22) {
+                        strhtml5 += `
+                        <section class="con2">
                         <!-- 上面图片内容 -->
-                        <div class="product-Content-Top">
+                        <div class="product-Content-Top2">
                             <img src="${value.url}"
                                 alt="">
+                          
                         </div>
                         <!-- 下面标题价格内容 -->
-                        <div class="product-Content-Botton">
+                        <div class="product-Content-Botton2">
                             <div><span>每满200减25劵</span></div>
                             <!-- 标题 -->
                             <h4>
-                                <a href="" title="耐热玻璃把手杯 防滑带杯盖 会变色的小胖喵">
-                                    <span>耐热玻璃把手杯 防滑带杯盖 会变色的小胖喵酒</span>
+                                <a href="" title="${value.title}">
+                                    <span>${value.title}</span>
                                 </a>
                             </h4>
                             <!-- 价格 -->
                             <p>
-                                <span>¥49</span>
-                                <span><s>¥69</s></span>
+                                <span>¥${value.price}</span>
+                                <span><del>￥${value.befprice}</del></span>
                             </p>
                         </div>
                     </section>
-
-                        
-                        
                         `;
-
                     }
-
                 });
 
                 $content1.html(strhtml1);
                 $content2.html(strhtml2);
                 $content3.html(strhtml3);
-                $content4.html(strhyml)
+                $content4.html(strhtml4);
+                $content5.html(strhtml5);
 
-                //加了后有个报错，不知道为什。
+                //加了后有个报错，不知道为什么。
                 //添加懒加载
                 // $(function () {
                 //     $("img.lazy").lazyload({ effect: "fadeIn" });
                 // });
 
-
-
-
-
-
-
             });
-
-
-
-
-            // $.ajax({
-            //     url: "http://10.31.162.54",
-            //     // data: {
-            //     //     num: 6
-            //     // },
-            //     type: "GET"
-            // }).done(function (data) {
-            //     var data = JSON.parse(data)
-            //     // let $clone = $(".hotcontent-item1 li").first().clone(true,true)
-            //     // console.log($clone)
-            //     const $box = $(".hotcontent-item1 ul")
-            //     $.each(data, function (index, value) {
-            //         let $clone = $(".hotcontent-item1 li").first().clone(true, true)
-            //         $clone.find("img").attr('src', value.url)
-            //         $clone.find(".hotcontent-price").html(value.price)
-            //         $clone.find(".hotcontent-title").html(value.title)
-            //         $box.append($clone)
-
-            //     })
-            // })
-
-
-
-
-
-
-
-
-
         },
+        // 轮播
         slide: function () {
             // console.log(22222222);
             const btnLeft = $(".btnLeft")
@@ -291,6 +277,23 @@ define(['jquery'], function ($) {
                 timmer = setInterval(function () {
                     btnRright.click()
                 }, 5000)
+            })
+        },
+        //登录
+        login: function () {
+            const $denglu = $(".denglu")
+            const $login_box = $(".login-box")
+            const $guanbi = $(".guanbi")
+            const $login = $(".login")
+            const $login_btn = $(".longin-btn")
+            $denglu.on("click", function () {
+                $login_box.show()
+                $login.animate({ "width": "300", "opacity": "1" }, 300)
+
+            })
+            $guanbi.on("click", function () {
+                $login_box.hide()
+                $login.animate({ "opacity": "0" }, 300)
             })
         }
     }

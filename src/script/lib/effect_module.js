@@ -31,6 +31,22 @@ define(['jquery'], function ($) {
             }, function () {
                 $(this).hide()
             })
+        },
+        /* 导航条固定 */
+        fixedtop: function () {
+            const header_nav_box = $("#header-Nav-box")
+            let top = header_nav_box.offset().top
+            let flag = true
+            $(document).on("scroll", function () {
+                if ($(this).scrollTop() >= top && flag) {
+                    flag = false
+                    header_nav_box.css("position", "fixed")
+                    header_nav_box.css("top", -40).stop().animate({ "top": 0 })
+                } else if ($(this).scrollTop() < top) {
+                    flag = true
+                    header_nav_box.css("position", "relative")
+                }
+            })
         }
 
     }

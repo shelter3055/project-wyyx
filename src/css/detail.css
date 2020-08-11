@@ -527,7 +527,8 @@ footer .lastend-bottom div p span {
 .details .details-left .details-left-top {
     height: 428px;
     width: 428px;
-    background: #ddd;
+    /* background: #ddd; */
+    border: 1px solid #e8e8e8;
     position: relative;
 }
 .details .details-left .details-left-top img {

@@ -3,16 +3,11 @@ require.config({
         'jquery': 'https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery',
         'jquerycookie': 'https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie',
         'jquerylazyload': 'https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload',
-        // indexmodule: "../script/lib/indexmodule",
 
     }
 });
 
-require(['./lib/index_module', './lib/effect_module'], function (m1, m2) {
-    m1.render();
-    m1.slide();
-    m1.login();
-    m2.tab();
-    m2.fixedtop();
+require(['./lib/list_module'], function (n1) {
+    n1.render();
     
-});
+})

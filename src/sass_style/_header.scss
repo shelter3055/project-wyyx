@@ -280,6 +280,10 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     .item {
         min-width: 1050px;
+        .jump{
+            font-size: 18px;
+            color: black;
+        }
         ul {
             float: left;
             margin-right: 24px;
