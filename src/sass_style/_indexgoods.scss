@@ -342,10 +342,11 @@
             background: #fff;
             // background: goldenrod;
 
-            &:nth-child(1) {
-                // display: none;
-                display: block;
-            }
+            // &:nth-child(1) {
+            //     display: none;
+            //     // display: block;
+            //r如果用模板字符串的方式渲染就不要这行代码
+            // }
             // <!-- 上面图片内容 -->
             .product-Content-Top {
                 position: relative;

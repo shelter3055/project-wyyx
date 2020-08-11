@@ -711,9 +711,6 @@
   margin-bottom: 10px;
   background: #fff;
 }
-.hotcontent-right ul li:nth-child(1) {
-  display: block;
-}
 .hotcontent-right ul li .product-Content-Top {
   position: relative;
   height: 160px;

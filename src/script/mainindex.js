@@ -8,7 +8,8 @@ require.config({
     }
 });
 
-require(['./lib/indexmodule'], function (m1) {
+require(['./lib/index_module', './lib/effect_module'], function (m1, m2) {
     m1.render();
     m1.slide();
+    m2.tab();
 });
