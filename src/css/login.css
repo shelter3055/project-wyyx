@@ -1,0 +1,484 @@
+@charset "UTF-8";
+/* 头部导航栏  */
+#headNav-box {
+    width: 100%;
+    height: 36px;
+    background: #333;
+}
+#headNav-box .headNav {
+    width: 1090px;
+    margin: 0 auto;
+}
+#headNav-box .headNav .headcontent {
+    float: right;
+}
+#headNav-box .headNav .headcontent li {
+    float: left;
+    cursor: pointer;
+}
+#headNav-box .headNav .headcontent li:nth-child(5),
+#headNav-box .headNav .headcontent li:nth-child(6) {
+    position: relative;
+}
+#headNav-box .headNav .headcontent li a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 12px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 10px;
+    border-right: 1px solid #5c5c5c;
+    vertical-align: middle;
+}
+#headNav-box .headNav .headcontent li a span {
+    font-size: 12px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #ccc;
+}
+#headNav-box .headNav .headcontent li:last-child {
+    padding-left: 12px;
+    background: url(../img/icon.png) no-repeat 8px 14px;
+}
+
+.headcontent .small-erji {
+    background: white;
+    width: 83px;
+    position: absolute;
+    top: 36px;
+    left: 4px;
+    z-index: 11;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.headcontent .small-erji span {
+    position: absolute;
+    border: 10px solid;
+    height: 0;
+    width: 0;
+    top: -20px;
+    left: 30px;
+    border-color: transparent transparent white transparent;
+}
+.headcontent .small-erji .small-ul {
+    width: 63px;
+    z-index: 11;
+    padding: 0 10px;
+}
+.headcontent .small-erji .small-ul li {
+    color: #ccc;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 38px;
+    height: 38px;
+    width: 60px;
+}
+.headcontent .small-erji .small-ul li:nth-last-child(1) {
+    border: none;
+}
+
+/*头部搜索加logo图片  */
+#headersearch {
+    width: 100%;
+    height: 120px;
+}
+#headersearch header {
+    width: 1090px;
+    margin: 0 auto;
+    height: 120px;
+}
+#headersearch header .header-Left {
+    float: left;
+    width: 362px;
+    height: 60px;
+    background: url(../img/icon.png) no-repeat 4px -300px;
+    margin-top: 24px;
+}
+#headersearch header .header-Center {
+    float: left;
+    margin-top: 30px;
+}
+#headersearch header .cart-Icon {
+    position: relative;
+    float: right;
+    width: 134px;
+    height: 38px;
+    border: 1px solid #cc9756;
+    margin-top: 32px;
+    margin-left: 49px;
+    cursor: pointer;
+    border-radius: 19px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 38px;
+    color: #cc9756;
+    background: url(../img/icon.png) no-repeat 15px -138px;
+}
+#headersearch header .cart-Icon .num {
+    position: absolute;
+    display: inline-block;
+    height: 19px;
+    width: 19px;
+    background: url(../img/icon.png) no-repeat 0px -21px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    top: 8px;
+    left: 98px;
+}
+
+.header-Center .search {
+    width: 430px;
+    height: 34px;
+    border: 1px solid #cc9756;
+    border-bottom-left-radius: 19px;
+    border-top-left-radius: 19px;
+    float: left;
+    background: url(../img/icon.png) no-repeat 18px -508px;
+    position: relative;
+}
+.header-Center .search input {
+    margin-left: 42px;
+    height: 34px;
+    width: 280px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+}
+.header-Center .search ul {
+    top: 35px;
+    left: 20px;
+    width: 410px;
+    position: absolute;
+    background: white;
+    z-index: 11;
+}
+.header-Center .search ul li {
+    font-size: 13px;
+    line-height: 26px;
+    cursor: pointer;
+    padding: 0 12px 0 10px;
+}
+.header-Center .search ul li:hover {
+    color: #b4a078;
+    background-color: #f8f5f0;
+}
+.header-Center .btn {
+    width: 90px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background-color: #cc9756;
+    float: left;
+    border: 1px solid #cc9756;
+    border-top-right-radius: 19px;
+    border-bottom-right-radius: 19px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: -0px;
+    margin-left: -5px;
+}
+.header-Center .btn:hover {
+    background-color: #e2c199;
+}
+.header-Center p {
+    margin-top: 44px;
+    margin-left: 20px;
+}
+.header-Center p a {
+    display: inline-block;
+    height: 12px;
+    font-size: 12px;
+    color: #cc9756;
+    cursor: pointer;
+    text-decoration: none;
+}
+.header-Center p a:first-child {
+    border-right: 1px solid #ccc;
+    padding-right: 5px;
+}
+.header-Center p a:nth-child(2) {
+    border-right: 1px solid #ccc;
+    padding-right: 5px;
+}
+.header-Center p a:nth-child(3) {
+    border-right: 1px solid #ccc;
+    padding-right: 5px;
+}
+
+/* 下拉列表 */
+#header-Nav-box {
+    width: 100%;
+    background: white;
+    position: relative;
+    z-index: 10;
+}
+#header-Nav-box .header-Nav {
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+    width: 1090px;
+}
+
+.header-list {
+    height: 30px;
+}
+.header-list li {
+    float: left;
+    padding: 0px 26px 0 26px;
+}
+.header-list li a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 7px;
+}
+.header-list li a:hover {
+    color: #cc9756;
+    border-bottom: 3px solid #cc9756;
+}
+.header-list li:first-child {
+    padding: 0 26px 0 0;
+}
+.header-list li:first-child a {
+    color: #cc9756;
+    border-bottom: 3px solid #cc9756;
+}
+.header-list li:nth-child(10) {
+    border-left: 1px solid #ccc;
+    height: 14px;
+    padding: 0px;
+}
+.header-list li:last-child {
+    padding: 0 0 0 24px;
+}
+
+.menu {
+    display: none;
+    white-space: nowrap;
+    position: absolute;
+    height: 380px;
+    top: 25px;
+    padding: 14px 20px 20px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menu .item {
+    min-width: 1050px;
+}
+.menu .item .jump {
+    font-size: 18px;
+    color: black;
+}
+.menu .item ul {
+    float: left;
+    margin-right: 24px;
+}
+.menu .item ul:last-child {
+    margin-right: 0px;
+}
+.menu .item li:first-child {
+    max-width: 124px;
+    width: 124px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 36px;
+    border-bottom: 1px solid #ddd;
+}
+.menu .item li {
+    width: 124px;
+    margin-bottom: 4px;
+    font-weight: 400;
+    line-height: 50px;
+}
+.menu .item li img {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.menu .item li span {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 1.2;
+    cursor: pointer;
+}
+.menu .item li span:hover {
+    color: #b4a078;
+}
+
+/* .login-box {
+            display: none;
+        } */
+
+.login-box .marsk {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    position: fixed;
+    background: url(https://yanxuan.nosdn.127.net/6c20940c7b36612b0ed4d7b0a8a4aafe.jpg) no-repeat;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    /* background: rgba(0, 0, 0, 0.8); */
+}
+
+.login-box .login {
+    position: relative;
+    width: 300px;
+    min-height: 300px;
+    background: white;
+    padding: 30px 40px 83px;
+    /* border: 1px solid black; */
+    color: #666;
+    /* opacity: 0; */
+}
+
+.login-box .login .guanbi {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+    background: url("http://yanxuan-static.nosdn.127.net/hxm/yanxuan-component/p/20170601/style/img/x1/icon-yxclose-s2ee250e88f-c6ae3be3a2.png?imageView&type=webp")
+        no-repeat 0 -94px;
+}
+
+.login-box .login .login-top {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.login-box .login .login-top span {
+    display: inline-block;
+}
+
+.login-box .login .login-top span:nth-child(2) {
+    margin: 0 20px;
+}
+
+.login-box .login .login-top a {
+    display: inline-block;
+    color: #666;
+}
+
+.login-box .login .register {
+    width: 298px;
+    height: 38px;
+    border: 1px solid #e8e8e8;
+    line-height: 36px;
+    border-radius: 2px;
+    margin-top: 50px;
+}
+
+.login-box .login .register i {
+    padding: 0px 7px 0px;
+    display: inline-block;
+    width: 21px;
+    height: 24px;
+    margin-top: 0px;
+    padding-right: 7px;
+    border-right: 1px solid #e8e8e8;
+    background: url("../img/username.png") 8px 2px no-repeat;
+    vertical-align: middle;
+}
+
+.login-box .login .register input {
+    height: 36px;
+    width: 222px;
+    display: inline-block;
+    vertical-align: middle;
+    outline: none;
+    padding: 0;
+    border: none;
+    font-size: 14px;
+}
+
+.login-box .login .password {
+    margin-top: 20px;
+}
+
+.login-box .login .password i {
+    background: url("../img/password.png") 8px 2px no-repeat;
+}
+
+.login-box .login .longin-btn {
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background: #b4a078;
+    font-size: 18px;
+    line-height: 48px;
+    border-radius: 2px;
+    margin-top: 30px;
+}
+
+.login-box .login .login-bottom {
+    height: 60px;
+    background: #f5f3ef;
+    overflow: hidden;
+    width: 355px;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    padding-right: 25px;
+}
+
+.login-box .login .login-bottom .login-bottom-left {
+    float: left;
+    margin-left: 32px;
+    padding-top: 18px;
+}
+
+.login-box .login .login-bottom .login-bottom-left a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    background: url(../img/icon8.png) no-repeat -7px -4px;
+}
+
+.login-box .login .login-bottom .login-bottom-left a:nth-child(2) {
+    background-position: -4px -245px;
+}
+
+.login-box .login .login-bottom .login-bottom-left a:nth-child(3) {
+    background-position: -7px -123px;
+}
+
+.login-box .login .login-bottom .login-bottom-left a:nth-child(4) {
+    background-position: -5px -83px;
+}
+
+.login-box .login .login-bottom .login-bottom-right {
+    float: right;
+    height: 12px;
+    color: #999;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 25px;
+    margin-left: 5px;
+}
+
+.login-box .login .login-bottom .login-bottom-right a {
+    color: #999;
+}

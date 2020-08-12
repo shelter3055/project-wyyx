@@ -16,7 +16,8 @@
   float: left;
   cursor: pointer;
 }
-#headNav-box .headNav .headcontent li:nth-child(5), #headNav-box .headNav .headcontent li:nth-child(6) {
+#headNav-box .headNav .headcontent li:nth-child(5),
+#headNav-box .headNav .headcontent li:nth-child(6) {
   position: relative;
 }
 #headNav-box .headNav .headcontent li a {
@@ -212,6 +213,147 @@
   padding-right: 5px;
 }
 
+/* 登陆注册 */
+.login-box {
+  display: none;
+}
+.login-box .marsk {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+}
+.login-box .login {
+  position: relative;
+  width: 300px;
+  min-height: 300px;
+  background: white;
+  padding: 30px 40px 83px;
+  color: #666;
+  opacity: 0;
+}
+.login-box .login .guanbi {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  background: url("http://yanxuan-static.nosdn.127.net/hxm/yanxuan-component/p/20170601/style/img/x1/icon-yxclose-s2ee250e88f-c6ae3be3a2.png?imageView&type=webp")
+    no-repeat 0 -94px;
+}
+.login-box .login .login-top {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+.login-box .login .login-top span {
+  display: inline-block;
+}
+.login-box .login .login-top span:nth-child(2) {
+  margin: 0 20px;
+}
+.login-box .login .login-top a {
+  display: inline-block;
+  color: #666;
+}
+.login-box .login .register {
+  width: 298px;
+  height: 38px;
+  border: 1px solid #e8e8e8;
+  line-height: 36px;
+  border-radius: 2px;
+  margin-top: 50px;
+}
+.login-box .login .register i {
+  padding: 0px 7px 0px;
+  display: inline-block;
+  width: 21px;
+  height: 24px;
+  margin-top: 0px;
+  padding-right: 7px;
+  border-right: 1px solid #e8e8e8;
+  background: url("../img/username.png") 8px 2px no-repeat;
+  vertical-align: middle;
+}
+.login-box .login .register input {
+  height: 36px;
+  width: 222px;
+  display: inline-block;
+  vertical-align: middle;
+  outline: none;
+  padding: 0;
+  border: none;
+  font-size: 14px;
+}
+.login-box .login .password {
+  margin-top: 20px;
+}
+.login-box .login .password i {
+  background: url("../img/password.png") 8px 2px no-repeat;
+}
+.login-box .login .longin-btn {
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  background: #b4a078;
+  font-size: 18px;
+  line-height: 48px;
+  border-radius: 2px;
+  margin-top: 30px;
+}
+.login-box .login .login-bottom {
+  height: 60px;
+  background: #f5f3ef;
+  overflow: hidden;
+  width: 355px;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  padding-right: 25px;
+}
+.login-box .login .login-bottom .login-bottom-left {
+  float: left;
+  margin-left: 32px;
+  padding-top: 18px;
+}
+.login-box .login .login-bottom .login-bottom-left a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(../img/icon8.png) no-repeat -7px -4px;
+}
+.login-box .login .login-bottom .login-bottom-left a:nth-child(2) {
+  background-position: -4px -245px;
+}
+.login-box .login .login-bottom .login-bottom-left a:nth-child(3) {
+  background-position: -7px -123px;
+}
+.login-box .login .login-bottom .login-bottom-left a:nth-child(4) {
+  background-position: -5px -83px;
+}
+.login-box .login .login-bottom .login-bottom-right {
+  float: right;
+  height: 12px;
+  color: #999;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 25px;
+  margin-left: 5px;
+}
+.login-box .login .login-bottom .login-bottom-right a {
+  color: #999;
+}
+
 /* 下拉列表 */
 #header-Nav-box {
   width: 100%;
@@ -317,209 +459,207 @@
 /* footer */
 
 .footimg {
-    width: 1090px;
-    margin: 0 auto;
-    padding-top: 50px;
-    height: 249px;
+  width: 1090px;
+  margin: 0 auto;
+  padding-top: 50px;
+  height: 249px;
 }
 .footimg .footerr,
 .footimg .footercon,
 .footimg .footerl {
-    float: left;
-    height: 204px;
-    width: 33.3%;
-    border-right: 1px solid #e9e9e9;
-    text-align: center;
-    cursor: pointer;
+  float: left;
+  height: 204px;
+  width: 33.3%;
+  border-right: 1px solid #e9e9e9;
+  text-align: center;
+  cursor: pointer;
 }
 .footimg .footerr h4,
 .footimg .footercon h4,
 .footimg .footerl h4 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .footimg div:nth-child(1) {
-    overflow: hidden;
+  overflow: hidden;
 }
 .footimg div:nth-child(1) a {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    padding-top: 20px;
-    border: 1px solid #e8e8e8;
-    vertical-align: top;
-    margin-right: 20px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  padding-top: 20px;
+  border: 1px solid #e8e8e8;
+  vertical-align: top;
+  margin-right: 20px;
 }
 .footimg div:nth-child(1) a:hover {
-    color: #b4a078;
+  color: #b4a078;
 }
 .footimg div:nth-child(1) a span {
-    font-size: 12px;
-    display: block;
-    margin-top: 10px;
+  font-size: 12px;
+  display: block;
+  margin-top: 10px;
 }
 .footimg div:nth-child(1) a i {
-    display: inline-block;
-    width: 31px;
-    height: 26px;
+  display: inline-block;
+  width: 31px;
+  height: 26px;
 }
 .footimg div:nth-child(1) a:nth-child(2) i {
-    background: url(../img/icon5.png) no-repeat 0 -290px;
+  background: url(../img/icon5.png) no-repeat 0 -290px;
 }
 .footimg div:nth-child(1) a:nth-child(2):hover i {
-    background: url(../img/icon5.png) no-repeat 0 -254px;
+  background: url(../img/icon5.png) no-repeat 0 -254px;
 }
 .footimg div:nth-child(1) a:nth-child(3) i {
-    background: url(../img/icon5.png) no-repeat 0 -97px;
+  background: url(../img/icon5.png) no-repeat 0 -97px;
 }
 .footimg div:nth-child(1) a:nth-child(3):hover i {
-    background: url(../img/icon5.png) no-repeat 0 -60px;
+  background: url(../img/icon5.png) no-repeat 0 -60px;
 }
 .footimg .footercon {
-    width: calc(33% - 74px);
-    padding: 0 37px;
+  width: calc(33% - 74px);
+  padding: 0 37px;
 }
 .footimg .footercon p {
-    font-size: 12px;
-    line-height: 23px;
-    margin-bottom: 22px;
+  font-size: 12px;
+  line-height: 23px;
+  margin-bottom: 22px;
 }
 .footimg .footercon .guanzhu {
-    font-size: 12px;
+  font-size: 12px;
 }
 .footimg .footercon .guanzhu span {
-    vertical-align: middle;
-    display: inline-block;
-    margin-right: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
 }
 .footimg .footercon .guanzhu div {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 .footimg .footercon .guanzhu div i {
-    display: inline-block;
-    margin-right: 10px;
-    height: 32px;
-    width: 32px;
+  display: inline-block;
+  margin-right: 10px;
+  height: 32px;
+  width: 32px;
 }
 .footimg .footercon .guanzhu div i:nth-child(1) {
-    background: url(../img/icon5.png) no-repeat 0 -470px;
+  background: url(../img/icon5.png) no-repeat 0 -470px;
 }
 .footimg .footercon .guanzhu div i:nth-child(2) {
-    background: url(../img/icon5.png) no-repeat 0 -428px;
+  background: url(../img/icon5.png) no-repeat 0 -428px;
 }
 .footimg .footercon .guanzhu div i:nth-child(3) {
-    background: url(../img/icon5.png) no-repeat 0 -326px;
+  background: url(../img/icon5.png) no-repeat 0 -326px;
 }
 .footimg div:nth-child(3) {
-    border: none;
+  border: none;
 }
 .footimg div:nth-child(3) img {
-    width: 108px;
-    height: 108px;
+  width: 108px;
+  height: 108px;
 }
 .footimg div:nth-child(3) p {
-    color: #b4a078;
-    margin-top: 3px;
-    font-size: 12px;
+  color: #b4a078;
+  margin-top: 3px;
+  font-size: 12px;
 }
 
 footer {
-    height: 250px;
-    width: 100%;
-    background-color: #414141;
+  height: 250px;
+  width: 100%;
+  background-color: #414141;
 }
 footer .lastend {
-    width: 1090px;
-    overflow: hidden;
-    padding-left: 17px;
-    margin-bottom: 30px;
-    margin: 0 auto;
-    cursor: pointer;
+  width: 1090px;
+  overflow: hidden;
+  padding-left: 17px;
+  margin-bottom: 30px;
+  margin: 0 auto;
+  cursor: pointer;
 }
 footer .lastend-top {
-    margin-top: 40px;
-    color: white;
-    border-bottom: 1px solid #4f4f4f;
-    padding-bottom: 30px;
+  margin-top: 40px;
+  color: white;
+  border-bottom: 1px solid #4f4f4f;
+  padding-bottom: 30px;
 }
 footer .lastend-top li {
-    margin-right: 128px;
-    font-size: 18px;
-    line-height: 51px;
-    display: inline-block;
-    vertical-align: middle;
+  margin-right: 128px;
+  font-size: 18px;
+  line-height: 51px;
+  display: inline-block;
+  vertical-align: middle;
 }
 footer .lastend-top li span {
-    vertical-align: middle;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background: url(../img/icon5.png) no-repeat;
-    margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url(../img/icon5.png) no-repeat;
+  margin-right: 10px;
 }
 footer .lastend-top li p {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 footer .lastend-top li:nth-child(1) {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 footer .lastend-top li:nth-child(1) span {
-    background-position: 0 -134px;
+  background-position: 0 -134px;
 }
 footer .lastend-top li:nth-child(2) span {
-    background-position: 0 -368px;
+  background-position: 0 -368px;
 }
 footer .lastend-top li:nth-child(3) span {
-    background-position: 0 0;
+  background-position: 0 0;
 }
 footer .lastend-top li:nth-child(4) {
-    margin: 0px;
+  margin: 0px;
 }
 footer .lastend-top li:nth-child(4) span {
-    background-position: 0 -194px;
+  background-position: 0 -194px;
 }
 footer .lastend-bottom {
-    text-align: center;
+  text-align: center;
 }
 footer .lastend-bottom p {
-    display: inline-block;
-    color: #999;
-    font-size: 12px;
-    margin-top: 20px;
+  display: inline-block;
+  color: #999;
+  font-size: 12px;
+  margin-top: 20px;
 }
 footer .lastend-bottom p span {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 footer .lastend-bottom div {
-    font-size: 12px;
-    color: #999;
+  font-size: 12px;
+  color: #999;
 }
 footer .lastend-bottom div p:nth-child(1) {
-    width: 1090px;
-    text-align: left;
-    position: relative;
-    margin: 10px 0;
+  width: 1090px;
+  text-align: left;
+  position: relative;
+  margin: 10px 0;
 }
 footer .lastend-bottom div p:nth-child(1) span {
-    position: absolute;
-    top: 0;
-    right: -10px;
+  position: absolute;
+  top: 0;
+  right: -10px;
 }
 footer .lastend-bottom div p a {
-    color: #999;
-    margin-right: 15px;
-    display: inline-block;
+  color: #999;
+  margin-right: 15px;
+  display: inline-block;
 }
 footer .lastend-bottom div p span {
-    display: inline-block;
-    margin-right: 15px;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 /* 购物车详情 */
 /* 没登录之前的页面 */
-
-
 
 /* ---------登陆后------------------- */
 .cart {
@@ -646,7 +786,7 @@ footer .lastend-bottom div p span {
   line-height: 14px;
   padding: 0 2px;
   background: 0 0;
-  color: #E36844;
+  color: #e36844;
   border: 1px solid #e36844;
   border-radius: 2px;
   font-size: 12px;
@@ -791,7 +931,7 @@ footer .lastend-bottom div p span {
   float: right;
   margin-top: 25px;
   font-weight: 700;
-  color: #BE4141;
+  color: #be4141;
 }
 .cart .cart-foot div:nth-child(4) span {
   display: inline-block;
@@ -803,7 +943,7 @@ footer .lastend-bottom div p span {
 }
 .cart .cart-foot div:nth-child(4) span:nth-child(2) {
   font-weight: 700;
-  color: #BE4141;
+  color: #be4141;
   font-size: 22px;
   line-height: 14px;
 }

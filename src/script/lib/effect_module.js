@@ -1,7 +1,6 @@
 /* 这里放公共的效果模块 */
 
-/* 左侧和右侧菜单栏 */
-/* 顶部的导航条固定 */
+
 
 define(['jquery'], function ($) {
     return {
@@ -32,6 +31,32 @@ define(['jquery'], function ($) {
                 $(this).hide()
             })
         },
+        /* 左侧和右侧菜单栏 */
+        rightNav: function () {
+            /* 右边的 */
+            const rightNav = $("#rightNav")
+            console.log(this);
+            let top = rightNav.offset().top - 70
+            $(document).on("scroll", function () {
+                if ($(this).scrollTop() >= top) {
+                    rightNav.css("position", "fixed")
+                    rightNav.css("top", 60)
+                    rightNav.css("right", 0)
+                } else if ($(this).scrollTop() < top) {
+                    rightNav.css("position", "absolute")
+                    rightNav.css("top", 35)
+                    rightNav.css("right", 5)
+                }
+            })
+            // 回到顶部
+            $('.backtop').on('click',function(){
+                $('html').animate({
+                    scrollTop:0
+                })
+            })
+
+
+        },
         /* 导航条固定 */
         fixedtop: function () {
             const header_nav_box = $("#header-Nav-box")
@@ -46,6 +71,41 @@ define(['jquery'], function ($) {
                     flag = true
                     header_nav_box.css("position", "relative")
                 }
+            })
+        },
+        //首页顶部点击登陆框弹出登录
+        login: function () {
+            const $denglu = $(".denglu")
+            const $login_box = $(".login-box")
+            const $guanbi = $(".guanbi")
+            const $login = $(".login")
+            const $login_btn = $(".longin-btn")
+            $denglu.on("click", function () {
+                $login_box.show()
+                $login.animate({ "width": "300", "opacity": "1" }, 300)
+
+            })
+            $guanbi.on("click", function () {
+                $login_box.hide()
+                $login.animate({ "opacity": "0" }, 300)
+            })
+        },
+        //注册
+        reg: function () {
+
+            console.log(1111);
+            const $username = $(".username")// 用户名
+            const $password = $(".password") // 账号提示
+            const $username_tip = $(".username-tip")// 密码提示
+            const $password_tip = $(".password-tip")
+            let userflag = false; //标记
+            let passflag = false;
+            $username.on("focus", function () {
+
+                $username_tip.html('设置后不可更改，中英文均可，最长14个英文或7个汉字')
+                    .css({
+                        color: '#ccc'
+                    })
             })
         }
 

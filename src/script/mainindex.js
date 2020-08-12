@@ -11,8 +11,9 @@ require.config({
 require(['./lib/index_module', './lib/effect_module'], function (m1, m2) {
     m1.render();
     m1.slide();
-    m1.login();
+    m2.login();
     m2.tab();
     m2.fixedtop();
-    
+    m2.rightNav();
+
 });

@@ -212,6 +212,147 @@
     padding-right: 5px;
 }
 
+/* 登陆注册 */
+.login-box {
+    display: none;
+}
+.login-box .marsk {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+}
+.login-box .login {
+    position: relative;
+    width: 300px;
+    min-height: 300px;
+    background: white;
+    padding: 30px 40px 83px;
+    color: #666;
+    opacity: 0;
+}
+.login-box .login .guanbi {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+    background: url("http://yanxuan-static.nosdn.127.net/hxm/yanxuan-component/p/20170601/style/img/x1/icon-yxclose-s2ee250e88f-c6ae3be3a2.png?imageView&type=webp")
+        no-repeat 0 -94px;
+}
+.login-box .login .login-top {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+.login-box .login .login-top span {
+    display: inline-block;
+}
+.login-box .login .login-top span:nth-child(2) {
+    margin: 0 20px;
+}
+.login-box .login .login-top a {
+    display: inline-block;
+    color: #666;
+}
+.login-box .login .register {
+    width: 298px;
+    height: 38px;
+    border: 1px solid #e8e8e8;
+    line-height: 36px;
+    border-radius: 2px;
+    margin-top: 50px;
+}
+.login-box .login .register i {
+    padding: 0px 7px 0px;
+    display: inline-block;
+    width: 21px;
+    height: 24px;
+    margin-top: 0px;
+    padding-right: 7px;
+    border-right: 1px solid #e8e8e8;
+    background: url("../img/username.png") 8px 2px no-repeat;
+    vertical-align: middle;
+}
+.login-box .login .register input {
+    height: 36px;
+    width: 222px;
+    display: inline-block;
+    vertical-align: middle;
+    outline: none;
+    padding: 0;
+    border: none;
+    font-size: 14px;
+}
+.login-box .login .password {
+    margin-top: 20px;
+}
+.login-box .login .password i {
+    background: url("../img/password.png") 8px 2px no-repeat;
+}
+.login-box .login .longin-btn {
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background: #b4a078;
+    font-size: 18px;
+    line-height: 48px;
+    border-radius: 2px;
+    margin-top: 30px;
+}
+.login-box .login .login-bottom {
+    height: 60px;
+    background: #f5f3ef;
+    overflow: hidden;
+    width: 355px;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    padding-right: 25px;
+}
+.login-box .login .login-bottom .login-bottom-left {
+    float: left;
+    margin-left: 32px;
+    padding-top: 18px;
+}
+.login-box .login .login-bottom .login-bottom-left a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    background: url(../img/icon8.png) no-repeat -7px -4px;
+}
+.login-box .login .login-bottom .login-bottom-left a:nth-child(2) {
+    background-position: -4px -245px;
+}
+.login-box .login .login-bottom .login-bottom-left a:nth-child(3) {
+    background-position: -7px -123px;
+}
+.login-box .login .login-bottom .login-bottom-left a:nth-child(4) {
+    background-position: -5px -83px;
+}
+.login-box .login .login-bottom .login-bottom-right {
+    float: right;
+    height: 12px;
+    color: #999;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 25px;
+    margin-left: 5px;
+}
+.login-box .login .login-bottom .login-bottom-right a {
+    color: #999;
+}
+
 /* 下拉列表 */
 #header-Nav-box {
     width: 100%;
@@ -520,116 +661,117 @@ footer .lastend-bottom div p span {
     padding-top: 20px;
     padding-bottom: 20px;
     background: #f4f0ea;
-  }
-  #koubeibox .koubei {
+}
+#koubeibox .koubei {
     background: white;
     position: relative;
     margin: 0 auto;
     width: 1090px;
-  }
-  #koubeibox .koubei .paixu {
+}
+#koubeibox .koubei .paixu {
     width: 1090px;
     overflow: hidden;
     padding: 20px 0;
     line-height: 1;
     border-top: 1px dashed #dedede;
     border-bottom: 1px dashed #dedede;
-  }
-  #koubeibox .koubei .paixu span {
+}
+#koubeibox .koubei .paixu span {
     font-size: 14px;
     display: inline-block;
     vertical-align: middle;
     margin-right: 28px;
     cursor: pointer;
     color: #999;
-  }
-  #koubeibox .koubei .paixu span:nth-child(2) {
+}
+#koubeibox .koubei .paixu span:nth-child(2) {
     color: #b4a078;
-  }
-  #koubeibox .koubei .paixu span:nth-child(3) {
+}
+#koubeibox .koubei .paixu span:nth-child(3) {
     color: #999;
-  }
-  
-  #koubeibox .koubei h2 {
+}
+
+#koubeibox .koubei h2 {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
     line-height: 44px;
-  }
-  #koubeibox .koubei .koubei-content {
+}
+#koubeibox .koubei .koubei-content {
     overflow: hidden;
     width: 1080px;
     margin-left: 10px;
     margin-right: 10px;
-  }
-  #koubeibox .koubei .koubei-content ul{
-      margin-left: 10px;
-      background: green;
-  }
-  #koubeibox .koubei .koubei-content li {
-    width: 260px;
+}
+#koubeibox .koubei .koubei-content ul {
+    margin-left: 10px;
+    background: green;
+}
+#koubeibox .koubei .koubei-content li {
+    width: 261px;
     background: white;
     margin-right: 10px;
     float: left;
-  }
-  
-  #koubeibox .koubei .koubei-content li:hover img:nth-child(2) {
+}
+
+#koubeibox .koubei .koubei-content li:hover img:nth-child(2) {
     z-index: 0;
-  }
-  #koubeibox .koubei .koubei-content li:hover {
+}
+#koubeibox .koubei .koubei-content li:hover {
     background-color: #f4f0ea;
     /* background: orange; */
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Top {
+}
+#koubeibox .koubei .koubei-content .product-Content-Top {
     height: 300px;
     position: relative;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Top img {
+}
+#koubeibox .koubei .koubei-content .product-Content-Top img {
     position: absolute;
     z-index: 0;
     width: 200px;
     height: 200px;
     margin: 10px 0 0 30px;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Top img:nth-child(2) {
+}
+#koubeibox .koubei .koubei-content .product-Content-Top img:nth-child(2) {
     z-index: -1;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner {
+}
+#koubeibox .koubei .koubei-content .product-Content-Top .promBanner {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 30px;
     background: url("https://yanxuan.nosdn.127.net/73de0050620397b41099c356292b28c8.png") no-repeat;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left {
+}
+#koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left {
     padding-left: 8px;
     padding-right: 14px;
     margin-top: -6px;
     height: 36px;
     float: left;
     color: white;
-    background: url("https://yanxuan.nosdn.127.net/ce3597696f4c886d1d81a7d94f8cfe6e.png?quality=95&type=webp&imageView") no-repeat -435px 0px;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left div:nth-child(1) {
+    background: url("https://yanxuan.nosdn.127.net/ce3597696f4c886d1d81a7d94f8cfe6e.png?quality=95&type=webp&imageView")
+        no-repeat -435px 0px;
+}
+#koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left div:nth-child(1) {
     font-size: 12px;
     height: 15px;
     line-height: 1;
     margin-top: 5px;
     text-align: center;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left div:nth-child(2) {
+}
+#koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left div:nth-child(2) {
     padding-left: 3px;
     font-size: 12px;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left div:nth-child(2) span {
+}
+#koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-left div:nth-child(2) span {
     font-size: 14px;
     height: 20px;
     line-height: 14px;
     margin-top: -1px;
     font-weight: 700;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-right {
+}
+#koubeibox .koubei .koubei-content .product-Content-Top .promBanner .promBanner-right {
     float: left;
     color: #fff;
     text-align: left;
@@ -638,15 +780,15 @@ footer .lastend-bottom div p span {
     font-size: 12px;
     font-weight: 700;
     margin-left: 5px;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Botton {
+}
+#koubeibox .koubei .koubei-content .product-Content-Botton {
     margin-top: 5px;
     margin-bottom: 50px;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Botton div:nth-child(1) {
+}
+#koubeibox .koubei .koubei-content .product-Content-Botton div:nth-child(1) {
     text-align: center;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Botton div:nth-child(1) span {
+}
+#koubeibox .koubei .koubei-content .product-Content-Botton div:nth-child(1) span {
     margin-left: 6px;
     display: inline-block;
     height: 20px;
@@ -655,8 +797,8 @@ footer .lastend-bottom div p span {
     padding: 0 5px;
     font-size: 12px;
     background: #e36844;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Botton h4 {
+}
+#koubeibox .koubei .koubei-content .product-Content-Botton h4 {
     width: 166px;
     margin: 0 auto 4px;
     line-height: 20px;
@@ -665,66 +807,66 @@ footer .lastend-bottom div p span {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Botton h4 a {
+}
+#koubeibox .koubei .koubei-content .product-Content-Botton h4 a {
     margin-top: 5px;
     text-align: center;
     display: block;
     cursor: pointer;
     text-decoration: none;
     color: black;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Botton h4 a span {
+}
+#koubeibox .koubei .koubei-content .product-Content-Botton h4 a span {
     font-size: 14px;
     color: black;
     display: block;
     font-weight: bold;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Botton p {
+}
+#koubeibox .koubei .koubei-content .product-Content-Botton p {
     text-align: center;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Botton p span:nth-child(1) {
+}
+#koubeibox .koubei .koubei-content .product-Content-Botton p span:nth-child(1) {
     display: inline-block;
     line-height: 13px;
     height: 13px;
     font-size: 13px;
     color: #d4282d;
-  }
-  #koubeibox .koubei .koubei-content .product-Content-Botton p span:nth-child(2) {
+}
+#koubeibox .koubei .koubei-content .product-Content-Botton p span:nth-child(2) {
     display: inline-block;
     color: #999;
     line-height: 12px;
     height: 12px;
     font-size: 12px;
-  }
-  #koubeibox .koubei .koubei-content li:nth-child(4n) {
+}
+#koubeibox .koubei .koubei-content li:nth-child(4n) {
     margin-right: 0;
-  }
-  #koubeibox .koubei .pagelist {
+}
+#koubeibox .koubei .pagelist {
     overflow: hidden;
     clear: both;
     width: 1090px;
     margin: 0 auto;
     text-align: right;
     padding-right: 20px;
-  }
-  #koubeibox .koubei .pagelist a {
+}
+#koubeibox .koubei .pagelist a {
     text-decoration: none;
-  }
-  #koubeibox .koubei .pagelist .m-style {
+}
+#koubeibox .koubei .pagelist .m-style {
     float: right;
     text-align: center;
-  }
-  #koubeibox .koubei .pagelist .m-style:before,
-  #koubeibox .koubei .pagelist .m-style:after {
+}
+#koubeibox .koubei .pagelist .m-style:before,
+#koubeibox .koubei .pagelist .m-style:after {
     content: "";
     display: table;
-  }
-  #koubeibox .koubei .pagelist .m-style:after {
+}
+#koubeibox .koubei .pagelist .m-style:after {
     clear: both;
     overflow: hidden;
-  }
-  #koubeibox .koubei .pagelist .m-style span {
+}
+#koubeibox .koubei .pagelist .m-style span {
     float: left;
     margin: 0 5px;
     width: 38px;
@@ -732,8 +874,8 @@ footer .lastend-bottom div p span {
     line-height: 38px;
     color: #bdbdbd;
     font-size: 14px;
-  }
-  #koubeibox .koubei .pagelist .m-style .active {
+}
+#koubeibox .koubei .pagelist .m-style .active {
     float: left;
     margin: 0 5px;
     width: 38px;
@@ -743,8 +885,8 @@ footer .lastend-bottom div p span {
     color: #fff;
     font-size: 14px;
     border: 1px solid #c2b9bc;
-  }
-  #koubeibox .koubei .pagelist .m-style a {
+}
+#koubeibox .koubei .pagelist .m-style a {
     float: left;
     margin: 0 5px;
     width: 38px;
@@ -754,28 +896,28 @@ footer .lastend-bottom div p span {
     border: 1px solid #ebebeb;
     color: #bdbdbd;
     font-size: 14px;
-  }
-  #koubeibox .koubei .pagelist .m-style a:hover {
+}
+#koubeibox .koubei .pagelist .m-style a:hover {
     color: #fff;
     background: #c2b9bc;
-  }
-  #koubeibox .koubei .pagelist .m-style .next,
-  #koubeibox .koubei .pagelist .m-style .prev {
+}
+#koubeibox .koubei .pagelist .m-style .next,
+#koubeibox .koubei .pagelist .m-style .prev {
     font-family: "Simsun";
     font-size: 16px;
     font-weight: bold;
     width: 80px;
-  }
-  #koubeibox .koubei .pagelist .now,
-  #koubeibox .koubei .pagelist .count {
+}
+#koubeibox .koubei .pagelist .now,
+#koubeibox .koubei .pagelist .count {
     padding: 0 5px;
     color: #f00;
-  }
-  #koubeibox .koubei .pagelist .eg img {
+}
+#koubeibox .koubei .pagelist .eg img {
     max-width: 800px;
     min-height: 500px;
-  }
-  #koubeibox .koubei .pagelist input {
+}
+#koubeibox .koubei .pagelist input {
     float: left;
     margin: 0 5px;
     width: 38px;
@@ -787,4 +929,4 @@ footer .lastend-bottom div p span {
     outline: none;
     color: #bdbdbd;
     font-size: 14px;
-  }
+}

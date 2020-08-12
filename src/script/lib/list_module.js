@@ -44,7 +44,8 @@ define(['jquery'], function ($) {
                     
                             <p>
                                 <span class="price">¥${value.price}</span>
-                                <span><s>¥${Math.round(Number(value.price) + 10) * 100 / 100}</s></span>
+                                <span><del>¥${Math.round(Number(value.price) + 10) * 100 / 100}</del></span>
+                               
                             </p>
                         </div>
                         </a>

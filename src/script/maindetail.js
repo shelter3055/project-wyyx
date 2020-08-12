@@ -6,7 +6,8 @@ require.config({
 
     }
 });
-require(['./lib/detail_module'], function (p1) {
+require(['./lib/detail_module','./lib/effect_module'], function (p1,p2) {
     p1.detail();
-    p1.zoom();
+    // p1.zoom();
+    p2.login();
 })

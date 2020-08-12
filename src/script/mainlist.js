@@ -7,7 +7,9 @@ require.config({
     }
 });
 
-require(['./lib/list_module'], function (n1) {
+require(['./lib/list_module','./lib/effect_module'], function (n1,n2) {
     n1.render();
+    n2.fixedtop();
+    n2.login();
     
 })

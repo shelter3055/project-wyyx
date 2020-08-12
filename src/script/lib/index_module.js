@@ -2,7 +2,7 @@ define(['jquery'], function ($) {
     return {
         //渲染
         render: function () {
-            console.log(1111);
+            // console.log(1111);
             const $hotcontent = $('.hotcontent')
             // const $hotcontent_btn = $('.hottitle li')
             const $hotcontent_btn = $('.hottitle li')
@@ -279,23 +279,7 @@ define(['jquery'], function ($) {
                 }, 5000)
             })
         },
-        //登录
-        login: function () {
-            const $denglu = $(".denglu")
-            const $login_box = $(".login-box")
-            const $guanbi = $(".guanbi")
-            const $login = $(".login")
-            const $login_btn = $(".longin-btn")
-            $denglu.on("click", function () {
-                $login_box.show()
-                $login.animate({ "width": "300", "opacity": "1" }, 300)
-
-            })
-            $guanbi.on("click", function () {
-                $login_box.hide()
-                $login.animate({ "opacity": "0" }, 300)
-            })
-        }
+        
     }
 
 });
