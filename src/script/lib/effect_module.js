@@ -49,13 +49,37 @@ define(['jquery'], function ($) {
                 }
             })
             // 回到顶部
-            $('.backtop').on('click',function(){
+            $('.backtop').on('click', function () {
                 $('html').animate({
-                    scrollTop:0
+                    scrollTop: 0
                 })
             })
 
 
+        },
+        leftNav: function () {
+            const leftNav = $("#leftNav")
+            console.log(5555555);
+            let top = leftNav.offset().top
+            $(document).on("scroll", function () {
+                if ($(this).scrollTop() >= top) {
+                    leftNav.css("position", "fixed")
+                    // leftNav.css("top",60) //1
+                    // leftNav.css("left",0)//1
+                    leftNav.css("top", 60)
+                    leftNav.css("left", 70)
+                } else {
+                    leftNav.css("position", "absolute")
+                    leftNav.css("top", 55)
+                    leftNav.css("left", 70) 
+
+
+                    // leftNav.css("position","fixed")
+                    // leftNav.css("top",100)
+                    // leftNav.css("left",85)
+
+                }
+            })
         },
         /* 导航条固定 */
         fixedtop: function () {

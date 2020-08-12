@@ -6,6 +6,7 @@ require.config({
 
     }
 });
-require(['./lib/effect_module'], function (q1) {
+require(['./lib/effect_module','./lib/cart_module'], function (q1,q2) {
     q1.login();
+    q2.cart();
 })

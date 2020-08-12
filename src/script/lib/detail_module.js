@@ -1,7 +1,7 @@
-define(['jquery','cookie'], function ($,cookie) {
+define(['jquery', 'cookie'], function ($, cookie) {
     return {
         detail: function () {
-            let sid = location.search.substring(1).split('=')[1];
+            let $sid = location.search.substring(1).split('=')[1];
             const $smallpic = $(".smallimg");
             const $bpic = $("#bpic");
             const $price = $(".pricenow");
@@ -13,16 +13,16 @@ define(['jquery','cookie'], function ($,cookie) {
                 url: "http://10.31.152.32/project-wyyx/php/detail.php",
                 type: "GET",
                 data: {
-                    sid: sid
+                    sid: $sid
                 }
             }).done(function (data) {
                 let dataobj = JSON.parse(data);
-                console.log(dataobj);
+                // console.log(dataobj);
                 $smallpic.attr("src", dataobj.url);
                 $title.html(dataobj.title);
                 $titletext.html(dataobj.t$titletext);
                 $price.html("¥" + dataobj.price);
-                $bpic.attr("src", data.url)
+                $bpic.attr("src", dataobj.url)
 
                 let imglist = dataobj.piclisturl.split(",");
                 let str = "";
@@ -32,12 +32,7 @@ define(['jquery','cookie'], function ($,cookie) {
                 `;
                 })
 
-                $oul.html(str)
-
-
-
-
-
+                $oul.html(str);
             })
 
             // 放大镜效果
@@ -134,7 +129,131 @@ define(['jquery','cookie'], function ($,cookie) {
                 }
             });
 
+        },
+        addgoods: function () {
+            // cookie.set('name','zhangsan',100); //检测一下cookie,能用
+            // console.log(cookie.get('name'));
+
+            const $addgoods = $('.jiaru');
+            let $sid = location.search.substring(1).split('=')[1];
+            let idarr = [];  //存放商品的sid和num
+            let numarr = [];
+            let _this = $(this);
+
+            // function cookietoarray() {
+            //     if (cookie.get('cookiesid') && cookie.get('cookienum')) {
+            //         _this.idarr = cookie.get('cookiesid').split(',');
+            //         _this.numarr = cookie.get('cookienum').split(',');
+            //     } else {
+            //         _this.arrsid = [];
+            //         _this.arrnum = [];
+            //     }
+            // }
+            console.log(111);
+
+            $addgoods.on('click', function () {
+                // console.log(_this);
+                // cookietoarray();
+                let $num = $(".number input").val();
+                
+                // console.log(22222);
+                if (cookie.get("idarr")) {
+                    // console.log($.cookie("idarr").split())
+                    // 存在就取出赋值
+                    idarr = cookie.get("idarr").split(",")
+                    numarr = cookie.get("numarr").split(",")
+                    console.log(11);
+                    // 判断是否是第一次赋值 获取id
+                    if (idarr.indexOf($sid) == -1) {
+                        // 存数量和id
+                        idarr.push($sid)
+                        numarr.push($num)
+
+                        console.log(idarr, numarr)
+                        cookie.set("idarr", idarr, 10)
+                        cookie.set("numarr", numarr, 10)
+                    } else {
+                        // 不是第一次赋值 就直接改变num值
+                        let index = idarr.indexOf($sid)
+                        numarr[index] = Number(numarr[index]) + Number($num)
+                        cookie.set("numarr", numarr, 10)
+                    }
+                } else {
+                    let idarr = []
+                    let numarr = []
+
+                    idarr.push($sid)
+                    numarr.push($num)
+                    cookie.set("idarr", idarr, 10)
+                    cookie.set("numarr", numarr, 10)
+                }
+                // alert("加入购物车成功")
+            })
         }
+
 
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const $jiaru = $('.jiaru')
+// // $.cookie("idarr",idarr,{expires:7,path:'/'})
+// let idarr = []
+// let numarr = []
+// $jiaru.on("click", function () {
+//     // 获取一下num值
+//     let $num = $(".number input").val()
+//     if ($.cookie("idarr")) {
+//         // console.log($.cookie("idarr").split())
+//         // 存在就取出赋值
+//         idarr = $.cookie("idarr").split(",")
+//         numarr = $.cookie("numarr").split(",")
+
+//         // 判断是否是第一次赋值 获取id
+//         if (idarr.indexOf($sid) == -1) {
+//             // 存数量和id
+//             idarr.push($sid)
+//             numarr.push($num)
+
+//             console.log(idarr, numarr)
+//             $.cookie("idarr", idarr, { expires: 7, path: '/' })
+//             $.cookie("numarr", numarr, { expires: 7, path: '/' })
+//         } else {
+
+//             // 不是第一次赋值 就直接改变num值
+//             let index = idarr.indexOf($sid)
+//             numarr[index] = Number(numarr[index]) + Number($num)
+//             $.cookie("numarr", numarr, { expires: 7, path: '/' })
+//         }
+//     } else {
+//         let idarr = []
+//         let numarr = []
+
+//         idarr.push($sid)
+//         numarr.push($num)
+//         $.cookie("idarr", idarr, { expires: 7, path: '/' })
+//         $.cookie("numarr", numarr, { expires: 7, path: '/' })
+//     }
+//     alert("加入购物车成功")
+// })

@@ -15,5 +15,7 @@ require(['./lib/index_module', './lib/effect_module'], function (m1, m2) {
     m2.tab();
     m2.fixedtop();
     m2.rightNav();
+    m2.leftNav();
+
 
 });

@@ -2,7 +2,7 @@ define([], function() {
     return {
         get(key) {
             if (document.cookie) { // 判断是否有cookie
-                let arr = document.cookie.split('; '); // 拆分所有cookie 
+                let arr = decodeURIComponent(document.cookie).split('; '); // 拆分所有cookie 
                 for (let i = 0; i < arr.length; i++) {
                     let item = arr[i].split('='); // 将cookie数据拆分成 key value
                     // 通过key  查找value
@@ -16,7 +16,7 @@ define([], function() {
             if (typeof day === 'number') {
                 let d = new Date();
                 d.setDate(d.getDate() + day);
-                document.cookie = `${key}=${value};expires=${d};path=/`;
+                document.cookie = `${key}=${encodeURIComponent(value)};expires=${d};path=/`;
             } else {
                 document.cookie = `${key}=${value};path=/`;
             }

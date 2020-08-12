@@ -19,9 +19,9 @@ define(['jquery'], function ($) {
                 type: "GET"
             }).done(function (data) {
 
-                console.log(data); //数据
+                //console.log(data); //数据
                 let arrdata = JSON.parse(data);
-                console.log(arrdata);
+                //console.log(arrdata);
                 let strhtml1 = ''; //人气推荐
                 const $content1 = $(".hotcontent-item1 ul");
                 let strhtml2 = '';//限时购
@@ -62,7 +62,7 @@ define(['jquery'], function ($) {
                                 <!-- 上面图片内容 -->
                                 <div class="product-Content-Top">
                                 <!-- 懒加载和src -->
-                                    <img class="lazy" src="${value.url}" alt="">
+                                    <img class="lazy" data-original="${value.url}" alt="">
                                 </div>
                                 <!-- 下面标题价格内容 -->
                                 <div class="product-Content-Botton">
@@ -212,10 +212,10 @@ define(['jquery'], function ($) {
                 $content5.html(strhtml5);
 
                 //加了后有个报错，不知道为什么。
-                //添加懒加载
-                // $(function () {
-                //     $("img.lazy").lazyload({ effect: "fadeIn" });
-                // });
+                // 添加懒加载
+                $(function () {
+                    $("img.lazy").lazyload({ effect: "fadeIn" });
+                });
 
             });
         },
