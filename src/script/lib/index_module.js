@@ -1,4 +1,4 @@
-define(['jquery'], function ($) {
+define(['jquery','jquerylazyload'], function ($) {
     return {
         //渲染
         render: function () {
@@ -13,7 +13,7 @@ define(['jquery'], function ($) {
                 $hotcontent.eq(index).css("display", "block")
                     .siblings(".hotcontent").css("display", "none")
             })
-            
+
             $.ajax({
                 url: "http://10.31.152.32/project-wyyx/php/alldata.php",
                 type: "GET"
@@ -88,7 +88,7 @@ define(['jquery'], function ($) {
                         strhtml2 += `
                         <section class="timebuy-item">
                         <div class="timebuy-item-left">
-                            <img src="${value.url}"
+                            <img class="lazy" data-original="${value.url}"
                                 alt="">
                         </div>
                         <div class="timebuy-item-right">
@@ -125,7 +125,7 @@ define(['jquery'], function ($) {
                         <div class="welfare-content-product">
                             <!-- 左边商品图片 -->
                             <div class="welfare-content-product-left">
-                                <img src="${value.url}"
+                                <img class="lazy" data-original="${value.url}"
                                     alt="">
                             </div>
                             <div class="welfare-content-product-right">
@@ -153,7 +153,7 @@ define(['jquery'], function ($) {
                         <section class="con1">
                             <!-- 上面图片内容 -->
                             <div class="product-Content-Top1">
-                                <img src="${value.url}"
+                                <img class="lazy" data-original="${value.url}"
                                     alt="">
                             </div>
                             <!-- 下面标题价格内容 -->
@@ -181,7 +181,7 @@ define(['jquery'], function ($) {
                         <section class="con2">
                         <!-- 上面图片内容 -->
                         <div class="product-Content-Top2">
-                            <img src="${value.url}"
+                            <img class="lazy" data-original="${value.url}"
                                 alt="">
                           
                         </div>
@@ -211,11 +211,18 @@ define(['jquery'], function ($) {
                 $content4.html(strhtml4);
                 $content5.html(strhtml5);
 
-                //加了后有个报错，不知道为什么。
                 // 添加懒加载
+                // jQuery(document).ready(function($){
+
                 $(function () {
                     $("img.lazy").lazyload({ effect: "fadeIn" });
                 });
+                // });
+
+
+                // jQuery(document).ready(function ($) {
+                //     $("img.lazy").lazyload({ effect: "fadeIn" });
+                // })
 
             });
         },
@@ -279,7 +286,7 @@ define(['jquery'], function ($) {
                 }, 5000)
             })
         },
-        
+
     }
 
 });

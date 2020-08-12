@@ -163,6 +163,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
                     idarr = cookie.get("idarr").split(",")
                     numarr = cookie.get("numarr").split(",")
                     console.log(11);
+                    console.log(idarr);
                     // 判断是否是第一次赋值 获取id
                     if (idarr.indexOf($sid) == -1) {
                         // 存数量和id

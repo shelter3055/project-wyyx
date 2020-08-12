@@ -1,21 +1,13 @@
 define(['jquery', 'cookie'], function ($, cookie) {
     return {
-        cart: function () {
-
-            // 价格
-            const $price = $(".price")
-            // 图片
-            const $picture = $("picture")
-            //标题
-            const $title = $("title")
-            // 盒子
-            const $cart_content = $(".cart-content")
-            // 小计
-            const $oneall = $(".oneall")
-            // 单选
-            const $onecheck = $(".onecheck")
-            // 全选
-            const $allcheck = $(".allcheck")
+        cart: function () { 
+            const $price = $(".price")  // 价格
+            const $picture = $("picture") // 图片
+            const $title = $("title") //标题
+            const $cart_content = $(".cart-content")// 盒子
+            const $oneall = $(".oneall")// 小计
+            const $onecheck = $(".onecheck")// 单选
+            const $allcheck = $(".allcheck")// 全选
             // 获取到id数组和数量数组
             // 只有在存在cookie的情况下去获取idarr和numarr
             if (cookie.get("idarr")) {
@@ -42,10 +34,46 @@ define(['jquery', 'cookie'], function ($, cookie) {
                         $clone.find(".number input").val($numarr[index])
                         $clone.find(".oneall").html(($numarr[index] * data.price).toFixed(2))
                         $cart_content.append($clone)
-                        // zongjia()
-                    })
-                })
+                        zongjia()
+                    });
+                });
             }
+
+            $("[type=checkbox]").attr("checked", true);
+
+            //计算总价
+            function zongjia() {
+                let $sum = 0; //商品的件数
+                let $count = 0; //商品的总价
+                // console.log($('.cart-item:visible'))
+                $('.cart-item:visible').each(function (index, ele) {
+
+                    if ($(ele).find('.onecheck').prop('checked')) { //复选框勾选
+                        // console.log(1)
+                        $sum += parseInt($(ele).find('.number input').val());//所有的被选中item数量相加
+                        $count += parseFloat($(ele).find('.oneall').html());//所有的被选中item单个总价相加
+                    }
+                });
+                $('.jianshu').html(`已选${$sum}件`);
+                $('.zongjia').html(`¥ ${$count.toFixed(2)}`);
+            }
+
+            // 全选控制单选
+            // $allcheck.on("change", function () {
+            //     // 全选框状态同步
+            //     console.log($(this).prop("checked")) //全选就是true
+            //     $allcheck.prop('checked', $(this).prop("checked"))
+            //     // 单选框和全选框状态同步
+            //     // console.log($onecheck)
+            //     // $onecheck.prop('checked',$(this).prop("checked"))
+            //     // 找到所有的单选框变成被选中
+            //     // 直接获取获取不到 通过找到可见所有的car-item和find去找到
+            //     $('.cart-item:visible').find('.onecheck').prop('checked', $(this).prop('checked'));
+            //     zongjia()
+            // });
+
+
+
 
 
 
@@ -53,91 +81,63 @@ define(['jquery', 'cookie'], function ($, cookie) {
 
     }
 
+});
+
+
+// define(['jquery', 'cookie'], function ($, cookie) {
+
+//     return {
+//         cart: function () {
+//             const $carts = $(".cart-content");
+
+//             if (cookie.get("idarr")) {
+//                 let $sidarr = cookie.get("idarr").split(',');
+//                 let $arrnum = cookie.get("numarr").split(',');
+//                 console.log($sidarr);
+//                 console.log($arrnum);
+//             };
+
+//             function rendercart(sid,num){
+//                 $.ajax({
+//                     url:"http://10.31.152.32/project-wyyx/php/detail.php",
+//                     data:{
+//                         sid:idarr
+//                     }
+//                 }).done((data)=>{
+//                     console.log(sid);
+//                     console.log(data);
+//                 })
+//             }
+//             rendercart();
+//             // $.ajax({
+//             //     url: "http://10.31.152.32/project-wyyx/php/detail.php",
+//             //     data:{
+//             //         sid:sid
+//             //     }
+
+//             // }).done((data) => {
+//             //     console.log(data);
+//             //     let arrdata = JSON.parse(data);
+                
+//             //     console.log(arrdata);
+//             //     // $.each($sidarr, (sid, value) => {
+//             //     //     console.log(sid);
+//             //     //     console.log(value);
+//             //     //     // console.log($sidarr);
+//             //     //     if (value.sid == sid) {
+//             //     //         let strhtml = '';
+
+//             //     //         strhtml += `
+                                    
+//             //     //                 `;
+//             //     //         $carts.html(strhtml);
+//             //     //     }
+//             //     // })
+//             // })
+//         }
+
+//     }
 
 
 
-
-
-
-
-
-
-})
-
-    // return {
-    //     cart: function () {
-    //         const $carts = $(".cart-content");
-
-    //         if (cookie.get("idarr")) {
-    //             let $sidarr = cookie.get("idarr").split(',');
-    //             let $arrnum = cookie.get("numarr").split(',');
-    //             // console.log($sidarr);
-    //             // console.log($arrnum);
-
-    //             $.ajax({
-    //                 url: "http://10.31.152.32/project-wyyx/php/alldata.php",
-
-    //             }).done((data) => {
-    //                 let arrdata = JSON.parse(data);
-    //                 // console.log(arrdata);
-    //                 $.each($sidarr, (sid, value) => {
-    //                     console.log(sid);
-    //                     console.log(value);
-    //                     // console.log($sidarr);
-    //                     if (value.sid == sid) {
-    //                         let strhtml = '';
-
-    //                         strhtml += `
-    //                             <div class="cart-item">
-    //                                 <input type="checkbox" class="onecheck">
-    //                                 <img class="picture" src="${value.url}" alt="">
-    //                                 <!-- 标题 -->
-    //                                 <!-- <p class="title">【丁磊直播款】多功能人体工学转椅</p> -->
-    //                                 <div class="title-box">
-    //                                     <div class="title1">【丁磊直播款】多功能人体工学转椅</div>
-    //                                     <div>撑腰护颈，舒适就坐一整天</div>
-    //                                 </div>
-    //                                 <!-- <div class="title-box">111111111</div> -->
-    //                                 <!-- 价格部分 -->
-    //                                 <div class="jiage">
-    //                                     <p class="price">￥1199</p>
-    //                                     <p>限时购</p>
-    //                                 </div>
-    //                                 <!-- 数量 -->
-    //                                 <div class="number">
-    //                                     <div>
-    //                                         <div class="jianhao">
-    //                                             <i></i>
-    //                                         </div>
-    //                                         <input type="text" value="1">
-    //                                         <div class="jiahao">
-    //                                             <i></i>
-    //                                             <i></i>
-    //                                         </div>
-    //                                     </div>
-
-    //                                 </div>
-    //                                 <!-- 小计 -->
-    //                                 <div class="oneall">
-    //                                     ￥1199
-    //                                 </div>
-    //                                 <!-- 操作 -->
-    //                                 <div class="play">
-    //                                     <p>移入收藏夹</p>
-    //                                     <p class="delete">删除</p>
-    //                                 </div>
-    //                         </div>      
-    //                             `;
-    //                         $carts.html(strhtml);
-    //                     }
-    //                 })
-    //             })
-    //         };
-    //         // renderlist(){
-    //         //     console.log(111);
-    //         // }
-
-    //     }
-
-
-
+// })

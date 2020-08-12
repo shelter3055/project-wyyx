@@ -7,7 +7,7 @@ require.config({
     }
 });
 
-require(['./lib/effect_module'],function(k1){
+require(['./lib/reg_module'],function(k1){
     
     k1.reg();
 })

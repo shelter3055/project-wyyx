@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = sha1($_POST['password']);
     $conn->query("insert regtry values(null,'$username','$password',NOW())");
-    header('location:http://10.31.152.32/project-wyyx/src/login.html');
+    // header('location:http://10.31.152.32/project-wyyx/src/login.html');
     
 }
 

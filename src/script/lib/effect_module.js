@@ -1,7 +1,6 @@
 /* 这里放公共的效果模块 */
 
 
-
 define(['jquery'], function ($) {
     return {
         /* 商品下拉二级菜单 */
@@ -117,20 +116,9 @@ define(['jquery'], function ($) {
         //注册
         reg: function () {
 
-            console.log(1111);
-            const $username = $(".username")// 用户名
-            const $password = $(".password") // 账号提示
-            const $username_tip = $(".username-tip")// 密码提示
-            const $password_tip = $(".password-tip")
-            let userflag = false; //标记
-            let passflag = false;
-            $username.on("focus", function () {
+                
 
-                $username_tip.html('设置后不可更改，中英文均可，最长14个英文或7个汉字')
-                    .css({
-                        color: '#ccc'
-                    })
-            })
+
         }
 
     }
