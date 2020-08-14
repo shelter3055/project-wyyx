@@ -70,7 +70,7 @@ define(['jquery'], function ($) {
                 } else {
                     leftNav.css("position", "absolute")
                     leftNav.css("top", 55)
-                    leftNav.css("left", 70) 
+                    leftNav.css("left", 70)
 
 
                     // leftNav.css("position","fixed")
@@ -112,11 +112,33 @@ define(['jquery'], function ($) {
                 $login_box.hide()
                 $login.animate({ "opacity": "0" }, 300)
             })
+
+
+
+
+
         },
         //注册
-        reg: function () {
+        signin: function () {
+            $('.longin-btn').on('click', function () {
+                $.ajax({
+                    type: 'post',
+                    url: 'http://10.31.152.32/project-wyyx/php/login.php',
+                    data: {
+                        user: $('.username').val(),
+                        pass: hex_sha1($('.password').val())
+                    }
+                }).done(function (result) {
+                    if (result) {
+                        location.href = "home.html";
+                    }
 
-                
+                    else {
+                        $('.password').val('');
+                        alert('用户名或者密码错误');
+                    }
+                });
+            });
 
 
         }

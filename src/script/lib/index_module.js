@@ -286,6 +286,7 @@ define(['jquery','jquerylazyload'], function ($) {
                 }, 5000)
             })
         },
+        //登录
 
     }
 

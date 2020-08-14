@@ -139,16 +139,6 @@ define(['jquery', 'cookie'], function ($, cookie) {
             let idarr = [];  //存放商品的sid和num
             let numarr = [];
             let _this = $(this);
-
-            // function cookietoarray() {
-            //     if (cookie.get('cookiesid') && cookie.get('cookienum')) {
-            //         _this.idarr = cookie.get('cookiesid').split(',');
-            //         _this.numarr = cookie.get('cookienum').split(',');
-            //     } else {
-            //         _this.arrsid = [];
-            //         _this.arrnum = [];
-            //     }
-            // }
             console.log(111);
 
             $addgoods.on('click', function () {
