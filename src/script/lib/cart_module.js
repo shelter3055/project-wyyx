@@ -1,6 +1,6 @@
 define(['jquery', 'cookie'], function ($, cookie) {
     return {
-        cart: function () { 
+        cart: function () {
             const $price = $(".price")  // 价格
             const $picture = $("picture") // 图片
             const $title = $("title") //标题
@@ -38,7 +38,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
                     });
                 });
             }
-
+            //默认全选
             $("[type=checkbox]").attr("checked", true);
 
             //计算总价
@@ -58,22 +58,87 @@ define(['jquery', 'cookie'], function ($, cookie) {
                 $('.zongjia').html(`¥ ${$count.toFixed(2)}`);
             }
 
-            // 全选控制单选
-            // $allcheck.on("change", function () {
-            //     // 全选框状态同步
-            //     console.log($(this).prop("checked")) //全选就是true
-            //     $allcheck.prop('checked', $(this).prop("checked"))
-            //     // 单选框和全选框状态同步
-            //     // console.log($onecheck)
-            //     // $onecheck.prop('checked',$(this).prop("checked"))
-            //     // 找到所有的单选框变成被选中
-            //     // 直接获取获取不到 通过找到可见所有的car-item和find去找到
-            //     $('.cart-item:visible').find('.onecheck').prop('checked', $(this).prop('checked'));
-            //     zongjia()
-            // });
+            // 全选
+            $allcheck.on("change", function () {
 
+                $allcheck.prop('checked', $(this).prop("checked"))
+                $('.cart-item:visible').find('.onecheck').prop('checked', $(this).prop('checked'));
+                zongjia()
+            })
 
+            let $inputs = $('.cart-item:visible').find(':checkbox');
+            console.log($inputs)
+            // 单选控制全选 单选框无法获取 用事件委托 
+            $('.cart-item').on('change', $inputs, function () {
+                console.log(1)
+                //$(this):被委托的元素，checkbox
+                if ($('.cart-item:visible').find('.onecheck').length === $('.cart-item:visible').find('.onecheck:checked').size()) {
+                    $allcheck.prop('checked', true);
+                } else {
+                    $allcheck.prop('checked', false);
+                }
+                zongjia(); //计算总价
+            });
 
+            //计算单价
+            function calcsingleprice(obj) { //obj元素对象
+                let $dj = parseFloat(obj.parents('.cart-item').find('.price').html());
+                let $num = parseInt(obj.parents('.cart-item').find('.number input').val());
+                return ($dj * $num).toFixed(2)
+            }
+            // 增加
+            console.log($(".jianhao"))
+            $('.jiahao').on('click', function () {
+                console.log(1)
+                let $num = $(this).parents('.cart-item').find('.number input').val();
+                $num++;
+                $(this).parents('.cart-item').find('.number input').val($num);
+
+                $(this).parents('.cart-item').find('.oneall').html(calcsingleprice($(this)));
+                zongjia(); //计算总价
+                setcookie($(this));
+            });
+            // 减少
+            $('.jianhao').on('click', function () {
+                let $num = $(this).parents('.cart-item').find('.number input').val();
+                $num--;
+                if ($num < 1) {
+                    $num = 1
+                }
+                console.log($num)
+                $(this).parents('.cart-item').find('.number input').val($num);
+
+                $(this).parents('.cart-item').find('.oneall').html(calcsingleprice($(this)));
+                zongjia(); //计算总价
+                setcookie($(this));
+            });
+            // 选中删除
+            $('.piliang').on("click", function () {
+                // 将cookie取出转成数组
+                if (cookie.get('numarr') && cookie.get('idarr')) {
+                    var $idarr = cookie.get("idarr").split(",")
+                    var $numarr = cookie.get("numarr").split(",")
+                } else {
+                    $idarr = [];
+                    $numarr = [];
+                }
+                let checkitem = $('.cart-item:visible').has("input:checked")
+
+                checkitem.each(function (index, value) {
+                    let sid = $(value).find(".picture").attr("sid")
+                    var index = $.inArray(sid, $idarr)
+                    //  改变cookie
+                    $idarr.splice(index, 1)
+                    $numarr.splice(index, 1)
+                    //  存入cookie
+                    cookie.get('idarr', $idarr, { expires: 7, path: '/' });
+                    cookie.get('numarr', $numarr, { expires: 7, path: '/' });
+
+                })
+                checkitem.remove()
+
+                zongjia()
+            })
 
 
 
@@ -118,7 +183,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
 //             // }).done((data) => {
 //             //     console.log(data);
 //             //     let arrdata = JSON.parse(data);
-                
+
 //             //     console.log(arrdata);
 //             //     // $.each($sidarr, (sid, value) => {
 //             //     //     console.log(sid);
@@ -128,7 +193,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
 //             //     //         let strhtml = '';
 
 //             //     //         strhtml += `
-                                    
+
 //             //     //                 `;
 //             //     //         $carts.html(strhtml);
 //             //     //     }

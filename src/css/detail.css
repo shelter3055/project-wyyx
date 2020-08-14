@@ -688,7 +688,7 @@ footer .lastend-bottom div p span {
 .details .details-left .details-left-top #bf {
     width: 400px;
     height: 400px;
-    border: 1px solid #000;
+    border: 1px solid rgb(230, 227, 227);
     overflow: hidden;
     position: absolute;
     visibility: hidden;

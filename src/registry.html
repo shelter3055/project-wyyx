@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,74 +10,83 @@
     <link rel="stylesheet" href="./fonts/iconfont.css">
     <script src="./script/require.js" async="true" defer data-main="./script/mainreg.js"></script>
 </head>
+
 <body>
     <!-- 顶部 -->
     <div class="top-box">
-    <div class="top">
-        <!-- 顶部左边 -->
-        <h2>
-            <img src="https://zc.reg.163.com/webzc/mail/images/logo-906b3317.png" alt="">
-        </h2>
-        <!-- 顶部右边 -->
-        <div class="top-right">
-            <span>靓号注册</span>
-            <span>new</span>
+        <div class="top">
+            <!-- 顶部左边 -->
+            <h2>
+                <img src="https://zc.reg.163.com/webzc/mail/images/logo-906b3317.png" alt="">
+            </h2>
+            <!-- 顶部右边 -->
+            <div class="top-right">
+                <span>靓号注册</span>
+                <span>new</span>
+            </div>
         </div>
     </div>
-</div>
     <!-- 注册 -->
     <div class="reg">
         <div class="reg-title">
             注册账号
         </div>
         <div class="reg-conent">
-            <!-- 账号 -->
-            <div class="item">
-                <input type="text" class="username" placeholder="请输入邮箱地址">
-            </div>
-            <!-- 账号验证提示 -->
-            <div class="username-tip tip"> </div>
-            <!-- 密码 -->
-            <div class="item">
-                <input type="password" class="password" placeholder="请输入8-16位密码">
-            </div>
-            <!-- 密码验证提示 -->
-            <div class="password-tip tip" > </div>
-            <!-- 同意点击 -->
-            <div class="tiaokuan">
-                <input type="checkbox">
-                <span>用户勾选即代表同意
-                    <a href="">《网易邮箱服务条款》</a>
-                    和
-                    <a href="">《网易隐私政策》</a>
-                </span>
-               
-            </div>
-            <!-- 注册按钮 -->
-            <div class="reg-btn">注册</div>
+            <form action="http://10.31.152.32/project-wyyx/php/registry.php" method="POST">
+                <!-- <form action="" class="reg-content"> -->
+                <!-- 账号 -->
+                <div class="item">
+                    <input type="text" class="username" placeholder="请输入用户名">
+                </div>
+                <!-- 账号验证提示 -->
+                <div class="username-tip tip"> </div>
+                <!-- 密码 -->
+                <div class="item">
+                    <input type="password" class="password" placeholder="请输入8-16位密码">
+                </div>
+                <!-- 密码验证提示 -->
+                <div class="password-tip tip"> </div>
+                <!-- 同意点击 -->
+                <div class="tiaokuan">
+                    <input type="checkbox" checked="checked">
+                    <span>用户勾选即代表同意
+                        <a href="">《网易邮箱服务条款》</a>
+                        和
+                        <a href="">《网易隐私政策》</a>
+                    </span>
+
+                </div>
+                <!-- 注册按钮 -->
+                <!-- <div class="reg-btn">注册</div> -->
+                <p class="regnew1">
+                    <input type="submit" value="用户注册" class="regnew" name="submit">
+                    
+                </p>
         </div>
-   
+        </form>
+
     </div>
-<!-- 尾部 -->
-<div class="footer">
-    <p>
-        <a href="">公司简介</a><span>|</span>
-        <a href="">网易帐号中心</a><span>|</span>
-        <a href="">帐号中心公众号</a><span>|</span>
-        <a href="">网易帐号管家</a><span>|</span>
-        <a href="">网易靓号</a><span>|</span>
-        <a href="">网易帮助中心</a>
-    </p>
-    <p>
-        <a href="">增值电信业务经营许可证粤B2-20090191</a>
-        <a href="">工业和信息化部ICP/IP地址/域名信息备案管理系统</a>
-    </p>
-    <p>
-        网易公司版权所有&nbsp©1997-2020
-    </p>
-</div>
+    <!-- 尾部 -->
+    <div class="footer">
+        <p>
+            <a href="">公司简介</a><span>|</span>
+            <a href="">网易帐号中心</a><span>|</span>
+            <a href="">帐号中心公众号</a><span>|</span>
+            <a href="">网易帐号管家</a><span>|</span>
+            <a href="">网易靓号</a><span>|</span>
+            <a href="">网易帮助中心</a>
+        </p>
+        <p>
+            <a href="">增值电信业务经营许可证粤B2-20090191</a>
+            <a href="">工业和信息化部ICP/IP地址/域名信息备案管理系统</a>
+        </p>
+        <p>
+            网易公司版权所有&nbsp©1997-2020
+        </p>
+    </div>
 </body>
-    <!-- <script src="./publicjs/jquery.js"></script> -->
-    <!-- <script src="./publicjs/jquery.cookie.js"></script> -->
-    <!-- <script src="./script/reg.js"></script> -->
+<script src="./publicjs/jquery.js"></script>
+<!-- <script src="./publicjs/jquery.cookie.js"></script> -->
+<!-- <script src="./script/reg.js"></script> -->
+
 </html>

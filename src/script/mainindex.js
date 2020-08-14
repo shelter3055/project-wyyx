@@ -6,6 +6,15 @@ require.config({
 
         // indexmodule: "../script/lib/indexmodule",
 
+    },
+    shim: { //让不支持amd的模块支持amd
+        'jquerycookie': {
+            deps: ['jquery'], //依赖的模块
+            // exports: ['jquerycookie'] //暴露的模块名称
+        },
+        'jquerylazyload': {
+            deps: ['jquery']
+        }
     }
 });
 
