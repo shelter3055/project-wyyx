@@ -1,2 +1,2 @@
 # project-wyyx
-myproject 网易严选
+网易严选PC端页面。
